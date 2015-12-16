@@ -15,9 +15,6 @@ function __extends(child: any, parent: any): void {
     }
 }
 
-namespace tsenv {
-    declare var global: any;
-    if ((<any>global) !== undefined) {
-        global.__extends = __extends;
-    }
+if (global) {
+    global.__extends = __extends;
 }

@@ -4,7 +4,6 @@
     "target": "ES5",
     "noEmitOnError": true,
     "noEmitHelpers": true,
-    "noImplicitAny": true,
     "noResolve": true,
     "preserveConstEnums": true
   },
