@@ -35,6 +35,14 @@ namespace define {
             factory: Function;
         };
     } = {};
+
+    // Add to Node.JS global if it is defined.
+    declare var global: any;
+    if (global) {
+        global.__extends = __extends;
+        global.define = define;
+        global.requirejs = requirejs;
+    }
 }
 
 function requirejs(id: string): any {
@@ -53,10 +61,4 @@ function requirejs(id: string): any {
         return requirejs(name);
     }));
     return _module.exports;
-}
-
-if (global) {
-    global.__extends = __extends;
-    global.define = define;
-    global.requirejs = requirejs;
 }

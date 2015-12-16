@@ -26,3 +26,8 @@ typings
 
 # Test output
 spec
+
+# Build output
+*.d.ts
+*.js
+*.js.map
