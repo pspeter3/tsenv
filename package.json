@@ -21,5 +21,10 @@
   "bugs": {
     "url": "https://github.com/pspeter3/tsenv/issues"
   },
-  "homepage": "https://github.com/pspeter3/tsenv#readme"
+  "homepage": "https://github.com/pspeter3/tsenv#readme",
+  "devDependencies": {
+    "jasmine": "^2.4.1",
+    "tsd": "^0.6.5",
+    "typescript": "^1.7.5"
+  }
 }
