@@ -3,6 +3,13 @@
   "version": "0.1.0",
   "description": "A strict TypeScript runtime environment that supports AMD and helpers",
   "main": "index.js",
+  "files": [
+    "LICENSE",
+    "index.d.ts",
+    "index.js",
+    "index.js.map",
+    "index.ts"
+  ],
   "scripts": {
     "build": "tsc --declaration --sourcemap index.ts",
     "pretest": "rimraf spec && tsc --module commonjs --outDir spec",
