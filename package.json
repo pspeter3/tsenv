@@ -1,6 +1,6 @@
 {
   "name": "tsenv",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "A strict TypeScript runtime environment that supports AMD and helpers",
   "main": "index.js",
   "files": [
