@@ -1,0 +1,8 @@
+cache:
+  directories:
+    - node_modules
+    - typings
+language: node_js
+node_js:
+  - "5.2"
+sudo: false
