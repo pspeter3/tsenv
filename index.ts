@@ -1,3 +1,8 @@
+/**
+ * Extend the child prototype with the parent prototype.
+ * @param {any} child  The child class to extend.
+ * @param {any} parent The parent class to inherit from.
+ */
 function __extends(child: any, parent: any): void {
     if (parent === null) {
         child.prototype = Object.create(parent);
@@ -15,6 +20,12 @@ function __extends(child: any, parent: any): void {
     }
 }
 
+/**
+ * Defines a new module in the system.
+ * @param {string}   id      The module id.
+ * @param {string[]} deps    The module dependencies.
+ * @param {Function} factory The module factory.
+ */
 function define(id: string, deps: string[], factory: Function): void {
     if (define.modules[id] !== undefined) {
         throw new Error(`${id} is defined`);
@@ -27,7 +38,15 @@ function define(id: string, deps: string[], factory: Function): void {
 }
 
 namespace define {
+    /**
+     * The AMD system identifier.
+     * @struct
+     */
     export var amd: {} = {};
+    /**
+     * The modules mapping.
+     * @dict
+     */
     export var modules: {
         [key: string]: {
             deps: string[];
@@ -45,6 +64,11 @@ namespace define {
     }
 }
 
+/**
+ * Evaluates a module from the system.
+ * @param  {string} id The module id.
+ * @return {any}       The module exports.
+ */
 function requirejs(id: string): any {
     var _module = define.modules[id];
     if (_module === undefined) {
