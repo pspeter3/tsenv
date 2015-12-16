@@ -1,0 +1,25 @@
+{
+  "name": "tsenv",
+  "version": "0.1.0",
+  "description": "A strict TypeScript runtime environment that supports AMD and helpers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pspeter3/tsenv.git"
+  },
+  "keywords": [
+    "amd",
+    "typescript",
+    "runtime",
+    "helpers"
+  ],
+  "author": "Phips Peter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pspeter3/tsenv/issues"
+  },
+  "homepage": "https://github.com/pspeter3/tsenv#readme"
+}
