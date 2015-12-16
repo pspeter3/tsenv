@@ -1,0 +1,16 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "ES5",
+    "noEmitOnError": true,
+    "noEmitHelpers": true,
+    "noImplicitAny": true,
+    "noResolve": true,
+    "preserveConstEnums": true
+  },
+  "files": [
+    "typings/jasmine/jasmine.d.ts",
+    "index.ts",
+    "spec.ts"
+  ]
+}

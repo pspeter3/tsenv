@@ -4,7 +4,9 @@
   "description": "A strict TypeScript runtime environment that supports AMD and helpers",
   "main": "index.js",
   "scripts": {
-    "test": "exit 0"
+    "pretest": "rimraf spec && tsc --module commonjs --outDir spec",
+    "test": "jasmine JASMINE_CONFIG_PATH=jasmine.json",
+    "typings": "tsd install"
   },
   "repository": {
     "type": "git",
@@ -21,5 +23,11 @@
   "bugs": {
     "url": "https://github.com/pspeter3/tsenv/issues"
   },
-  "homepage": "https://github.com/pspeter3/tsenv#readme"
+  "homepage": "https://github.com/pspeter3/tsenv#readme",
+  "devDependencies": {
+    "jasmine": "^2.4.1",
+    "rimraf": "^2.4.4",
+    "tsd": "^0.6.5",
+    "typescript": "^1.7.5"
+  }
 }
