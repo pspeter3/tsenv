@@ -66,7 +66,10 @@ function requirejs(id: string): any {
     if (_module === undefined) {
         throw new Error(`${id} is undefined`);
     }
-    _module.factory.apply(null, _module.deps.map((name) => {
+    if (_module.exports !== undefined) {
+        return _module.exports;
+    }
+    var result = _module.factory.apply(null, _module.deps.map((name) => {
         if (name === "require") {
             return requirejs;
         }
@@ -76,6 +79,9 @@ function requirejs(id: string): any {
         }
         return requirejs(name);
     }));
+    if (result !== undefined) {
+        _module.exports = result;
+    }
     return _module.exports;
 }
 
