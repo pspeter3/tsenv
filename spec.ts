@@ -114,5 +114,16 @@ describe("tsenv", () => {
                 global.requirejs("foo");
             }).toThrow();
         });
+
+        it("should handle a return", () => {
+            var id = "foo";
+            var deps = [];
+            var foo = {};
+            var factory = (exports: any) => {
+                return foo;
+            };
+            global.define(id, deps, factory);
+            expect(global.requirejs(id)).toBe(foo);
+        });
     });
 });
